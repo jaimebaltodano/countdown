@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Countdown</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="css/screen.css">
+        <script language="javascript" type="text/javascript" src="js/counter.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<header>
+				<div class="hero">
+                    <h1>Countdown</h1>
+                    <input type="number" name="lefttime" id="lefttime"></input>
+					<a class="btn" id= "btn" title="Count" href="#" >Count</a>
+				</div>
+			</header>
+			<section class="time">
+				<aside>
+                    <div class="content">
+                        <p class="digits days">0</p>
+                        <p class="tag"><strong>Days</strong></p>
+                    </div>
+                </aside>
+                <aside>
+                    <div class="content">
+                        <p class="digits hours">0</p>
+                        <p class="tag"><strong>Hours</strong></p>
+                    </div>
+                </aside>
+                <aside>
+                    <div class="content">
+                        <p class="digits minutes">0</p>
+                        <p class="tag"><strong>Minutes</strong></p>
+                    </div>
+                </aside>
+                <aside>
+                    <div class="content">
+                        <p class="digits seconds">0</p>
+                        <p class="tag"><strong>Seconds</strong></p>
+                    </div>
+                </aside>
+			</section>
+		</div>
+    </body>
+    <script language="javascript">
+        document.getElementById('lefttime').addEventListener('keypress', OnlyNumbers,false);
+        document.getElementById('btn').addEventListener('click', UpdateTimer,false);
+        setInterval(DisplayCounter,1000)
+    </script>
+</html>
